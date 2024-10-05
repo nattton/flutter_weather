@@ -7,7 +7,7 @@ part 'weather.g.dart';
 class Weather with _$Weather {
   const factory Weather({
     required double temperature,
-    @JsonKey(name: 'weathercode') required double weatherCode,
+    required double weatherCode,
   }) = _Weather;
 
   factory Weather.fromJson(Map<String, Object?> json) =>
