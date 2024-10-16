@@ -1,15 +1,15 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-part 'weather.freezed.dart';
 part 'weather.g.dart';
 
-@freezed
-class Weather with _$Weather {
-  const factory Weather({
-    required double temperature,
-    required double weatherCode,
-  }) = _Weather;
+@JsonSerializable()
+class Weather {
+  const Weather({required this.temperature, required this.weatherCode});
 
-  factory Weather.fromJson(Map<String, Object?> json) =>
+  factory Weather.fromJson(Map<String, dynamic> json) =>
       _$WeatherFromJson(json);
+
+  final double temperature;
+  @JsonKey(name: 'weathercode')
+  final double weatherCode;
 }

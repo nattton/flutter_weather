@@ -11,14 +11,25 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  weather_repository:
+    path: packages/weather_repository
   cupertino_icons: ^1.0.8
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
+  google_fonts: ^6.2.1
+  hydrated_bloc: ^9.1.5
+  json_annotation: ^4.9.0
+  path_provider: ^2.1.4
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.13
+  json_serializable: ^6.8.0
+  bloc_test: ^9.1.7
+  mocktail: ^1.0.4
 
 flutter:
   uses-material-design: true

@@ -1,17 +1,21 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-part 'location.freezed.dart';
 part 'location.g.dart';
 
-@freezed
-class Location with _$Location {
-  const factory Location({
-    required int id,
-    required String name,
-    required double latitude,
-    required double longitude,
-  }) = _Location;
+@JsonSerializable()
+class Location {
+  const Location({
+    required this.id,
+    required this.name,
+    required this.latitude,
+    required this.longitude,
+  });
 
-  factory Location.fromJson(Map<String, Object?> json) =>
+  factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
+
+  final int id;
+  final String name;
+  final double latitude;
+  final double longitude;
 }
